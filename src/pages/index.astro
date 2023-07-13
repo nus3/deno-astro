@@ -1,5 +1,10 @@
 ---
 import '../style.css'
+
+const personResponse = await fetch('https://randomuser.me/api/');
+const personData = await personResponse.json();
+const randomPerson = personData.results[0];
+
 ---
 
 <html lang="en">
@@ -12,5 +17,20 @@ import '../style.css'
 	</head>
 	<body>
 		<h1>Deno + Astro</h1>
+		<h2>A random user</h2>
+		<section class="profile">
+			<div>
+				<p>Name: {randomPerson.name.first}</p>
+				<p>age: {randomPerson.dob.age}</p>
+			</div>
+			<img src={randomPerson.picture.medium} alt="user picture">
+		</section>
 	</body>
 </html>
+
+<style>
+	.profile {
+		display: flex;
+		gap: 10px;
+	}
+</style>
