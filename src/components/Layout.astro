@@ -1,0 +1,60 @@
+---
+import "../style.css"
+import CommonHead from "./CommonHead.astro";
+---
+
+<html lang="en">
+  <CommonHead />
+  <body class="body">
+    <header class="header">
+      <h1 class="title">View Transition in Astro</h1>
+      <ul class="menu">
+        <li class="menu-item"><a href="./nus1">nus1</a></li>
+        <li class="menu-item"><a href="./nus2">nus2</a></li>
+        <li class="menu-item"><a href="./nus3">nus3</a></li>
+      </ul>
+    </header>
+    <h2></h2>
+    <main class="main" transition:animate="slide">
+      <slot />
+    </main>
+  </body>
+</html>
+
+
+<style scoped>
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 1rem;
+  background-color: var(--bg-light-color);
+}
+
+.main {
+  padding: 2rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-item {
+  margin: 0;
+}
+</style>
+
+
