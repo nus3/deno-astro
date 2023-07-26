@@ -1,4 +1,4 @@
-import type { APIRoute } from "npm:astro@2.9.3";
+import type { APIRoute } from "npm:astro@2.8.1";
 
 // deno-lint-ignore require-await
 export const get: APIRoute = async () => {
