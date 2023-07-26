@@ -4,21 +4,21 @@ import CommonHead from "./CommonHead.astro";
 ---
 
 <html lang="en">
-	<CommonHead />
-	<body class="body">
-		<header class="header">
-			<h1 class="title">View Transition in Astro</h1>
-			<ul class="menu">
-				<li class="menu-item"><a href="./nus1">nus1</a></li>
-				<li class="menu-item"><a href="./nus2">nus2</a></li>
-				<li class="menu-item"><a href="./nus3">nus3</a></li>
-			</ul>
-		</header>
-		<h2></h2>
-		<main class="main" transition:animate="slide">
-			<slot />
-		</main>
-	</body>
+  <CommonHead />
+  <body class="body">
+    <header class="header">
+      <h1 class="title">View Transition in Astro</h1>
+      <ul class="menu">
+        <li class="menu-item"><a href="./nus1">nus1</a></li>
+        <li class="menu-item"><a href="./nus2">nus2</a></li>
+        <li class="menu-item"><a href="./nus3">nus3</a></li>
+      </ul>
+    </header>
+    <h2></h2>
+    <main class="main" transition:animate="slide">
+      <slot />
+    </main>
+  </body>
 </html>
 
 
