@@ -5,4 +5,7 @@ import deno from "npm:@astrojs/deno@4.2.0";
 export default defineConfig({
   output: "server",
   adapter: deno(),
+  experimental: {
+    viewTransitions: true,
+  },
 });
