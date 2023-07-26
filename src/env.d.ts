@@ -1,1 +1,1 @@
-/// <reference types="npm:astro@2.9.3/client" />
+/// <reference types="npm:astro@2.8.1/client" />
